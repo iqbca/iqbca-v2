@@ -1,20 +1,21 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
+import Navbar from "./components/layout/Navbar/Navbar";
 
 function App() {
-
   return (
-
-    <div className="bg-[#09090B] text-white">
+    <div className="min-h-screen bg-[#09090B] text-white">
 
       <Navbar />
 
-      <Hero />
+      <section className="h-screen flex items-center justify-center">
+
+        <h1 className="text-7xl font-black">
+          Home
+        </h1>
+
+      </section>
 
     </div>
-
   );
-
 }
 
 export default App;
