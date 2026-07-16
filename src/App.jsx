@@ -1,21 +1,10 @@
-import Navbar from "./components/layout/Navbar/Navbar";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-[#09090B] text-white">
-
-      <Navbar />
-
-      <section className="h-screen flex items-center justify-center">
-
-        <h1 className="text-7xl font-black">
-          Home
-        </h1>
-
-      </section>
-
-    </div>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 }
-
-export default App;
