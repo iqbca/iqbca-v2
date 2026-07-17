@@ -3,46 +3,41 @@ import { ArrowRight } from "lucide-react";
 export default function Button({
   children,
   variant = "primary",
-  icon = false,
   onClick,
 }) {
-  const variants = {
+  const styles = {
     primary:
-      "bg-blue-600 hover:bg-blue-700 text-white",
+      "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-600/20 hover:shadow-blue-500/40",
 
     secondary:
-      "border border-zinc-700 hover:border-white text-white bg-transparent",
-
-    ghost:
-      "hover:bg-white/10 text-white",
+      "bg-white/5 border border-white/10 backdrop-blur-xl hover:bg-white/10",
   };
 
   return (
     <button
       onClick={onClick}
       className={`
-        inline-flex
-        items-center
-        gap-2
+        group
         px-7
         py-4
         rounded-2xl
-        font-medium
+        font-semibold
+        inline-flex
+        items-center
+        gap-3
         transition-all
         duration-300
-        hover:scale-105
-        active:scale-95
-        ${variants[variant]}
+        hover:-translate-y-1
+        hover:scale-[1.02]
+        ${styles[variant]}
       `}
     >
       {children}
 
-      {icon && (
-        <ArrowRight
-          size={18}
-          className="transition-transform duration-300 group-hover:translate-x-1"
-        />
-      )}
+      <ArrowRight
+        size={18}
+        className="transition-transform duration-300 group-hover:translate-x-1"
+      />
     </button>
   );
 }
