@@ -5,20 +5,25 @@ export default function StatCard({ number, label }) {
     <motion.div
       whileHover={{
         y: -8,
-        scale: 1.02,
+        scale: 1.03,
       }}
       className="
-      rounded-3xl
-      bg-white/5
-      backdrop-blur-xl
+      relative
+      overflow-hidden
+      rounded-[28px]
       border
       border-white/10
-      p-8
+      bg-gradient-to-b
+      from-white/5
+      to-white/[0.03]
+      backdrop-blur-xl
+      p-10
       text-center
-      transition
       "
     >
-      <h2 className="text-5xl font-black text-white mb-3">
+      <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-blue-500 to-cyan-400" />
+
+      <h2 className="text-6xl font-black mb-4">
         {number}
       </h2>
 

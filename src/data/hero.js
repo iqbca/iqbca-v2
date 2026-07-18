@@ -1,16 +1,15 @@
 const hero = {
   badge: "Investment Analytics Engineer",
 
-  title: [
-    "Building Institutional",
-    "Analytics Platforms",
-    "for Modern",
-    "Investment Teams",
-  ],
+title: [
+  "Building Institutional",
+  "Analytics Platforms",
+  "for Modern",
+  "Investment Teams",
+],
 
-  description:
-    "I design and build institutional-grade portfolio analytics, reporting automation and investment intelligence platforms using Python, SQL, PostgreSQL, Power BI and Excel.",
-
+description:
+  "I build enterprise-grade portfolio analytics platforms, investment reporting systems and workflow automation solutions using Python, SQL, PostgreSQL, React and Power BI.",
   technologies: [
     "Python",
     "SQL",

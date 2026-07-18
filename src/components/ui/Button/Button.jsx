@@ -18,8 +18,9 @@ export default function Button({
       onClick={onClick}
       className={`
         group
-        px-7
-        py-4
+        px-10
+        py-5 
+        
         rounded-2xl
         font-semibold
         inline-flex

@@ -4,14 +4,15 @@ import Badge from "../../../../components/ui/Badge/Badge";
 import Container from "../../../../components/ui/Container/Container";
 import { PROFILE_IMAGE } from "../../../../utils/constants";
 import { motion } from "framer-motion";
+import ScrollIndicator from "../ScrollIndicator/ScrollIndicator";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-24">
+    <section className="relative min-h-[70vh] pt-28 pb-10">
 
       <Container>
 
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-20 xl:gap-20 items-center">
 
           {/* LEFT */}
 
@@ -33,7 +34,7 @@ export default function Hero() {
 
             </h1>
 
-            <p className="text-zinc-400 text-lg leading-8 max-w-xl mb-10">
+            <p className="text-zinc-300 text-lg leading-8 max-w-3xl mb-10">
               {hero.description}
             </p>
 
@@ -70,27 +71,66 @@ export default function Hero() {
             className="flex justify-center lg:justify-end"
           >
 
-            <div className="relative">
+<motion.div
+  animate={{
+    y: [0, -8, 0],
+  }}
+  transition={{
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="relative"
+>
 
-              <div className="absolute -inset-8 rounded-full bg-blue-600/20 blur-[100px]" />
+  <div className="absolute -inset-12 rounded-full bg-blue-600/20 blur-[120px]" />
 
-              <div className="relative rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl p-4 shadow-2xl">
+  <div className="absolute inset-0 rounded-[36px] bg-gradient-to-br from-blue-500/20 to-cyan-400/10 blur-2xl" />
 
-                <img
-                  src={PROFILE_IMAGE}
-                  alt="Asif Iqbal"
-                  className="w-[420px] rounded-[24px]"
-                />
+  <div
+    className="
+    relative
+    rounded-[36px]
+    p-[2px]
+    bg-gradient-to-br
+    from-blue-500/40
+    via-white/20
+    to-cyan-500/30
+    shadow-[0_30px_80px_rgba(37,99,235,.25)]
+    "
+  >
 
-              </div>
+    <div
+      className="
+      rounded-[34px]
+      bg-[#111217]/90
+      backdrop-blur-2xl
+      p-5
+      "
+    >
 
-            </div>
+      <img
+        src={PROFILE_IMAGE}
+        alt="Asif Iqbal"
+        className="w-[480px] rounded-[28px]"
+      />
+
+    </div>
+
+  </div>
+
+</motion.div>
 
           </motion.div>
 
         </div>
 
       </Container>
+
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+    <ScrollIndicator />
+</div>
+
 
     </section>
   );
