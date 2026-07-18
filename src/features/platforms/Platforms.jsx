@@ -1,7 +1,23 @@
-export default function Home() {
+import Navbar from "../../components/layout/Navbar/Navbar";
+import AnimatedBackground from "../home/components/AnimatedBackground/AnimatedBackground";
+import Footer from "../../components/layout/Footer/Footer";
+
+import PlatformsHero from "./components/PlatformsHero/PlatformsHero";
+import PlatformCards from "./components/PlatformCards/PlatformCards";
+
+export default function Platforms() {
   return (
-    <div className="min-h-screen bg-[#09090B] text-white flex items-center justify-center text-6xl font-bold">
-      Home
-    </div>
+    <main className="relative min-h-screen bg-slate-900 text-white overflow-hidden">
+
+      <Navbar />
+      <AnimatedBackground />
+
+      <PlatformsHero />
+
+      <PlatformCards />
+
+      <Footer />
+
+    </main>
   );
 }
